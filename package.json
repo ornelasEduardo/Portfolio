@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Static Site for my Portfolio",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ornelasEduardo/Portfolio.git"
+  },
+  "author": "Eduardo Ornelas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ornelasEduardo/Portfolio/issues"
+  },
+  "homepage": "https://github.com/ornelasEduardo/Portfolio#readme"
+}

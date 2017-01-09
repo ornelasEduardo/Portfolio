@@ -1,0 +1,64 @@
+@import 'normalize';
+
+//variables
+$font-color: white;
+$font-size: 16;
+$h1-size: 72;
+
+//functions
+@function rem-calc($value){
+  @return ($value / 16) + rem;
+}
+
+@mixin center-block(){
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  font-size: rem-calc($font-size);
+}
+
+div,p,span{
+  color: $font-color;
+}
+
+body{
+  background-color: #001427 !important;
+}
+
+.landing-tron-container{
+  padding: 0 !important;
+}
+
+.landing-tron{
+  background-color: #F4D58D;
+  height: 200px;
+
+  .welcome-msg{
+    width: 100%;
+    height: 50%;
+    display: block;
+    @include center-block;
+    color: $font-color !important;
+    font-size: 5vw;
+  }
+
+  .arrow-container{
+    width: 100%;
+    height: 50%;
+    display: block;
+    color: #001427;
+  }
+}
+
+.content-container{
+  padding-top: 15px;
+  .sig-div{
+    width: 33.33%;
+    height: 400px;
+    background-color: #967D69;
+  }
+}
