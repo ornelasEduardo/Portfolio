@@ -12,7 +12,7 @@ const rename = require('gulp-rename');
 gulp.task('imagemin', () =>
   gulp.src('images/**.*')
     .pipe(imagemin({progressive: true}))
-    .pipe(gulp.dest('build/'))
+    .pipe(gulp.dest('build/images'))
 );
 
 gulp.task('uglify-js', () =>
@@ -40,4 +40,10 @@ gulp.task('sass-compile', () =>
     .pipe(gulp.dest('styles/'))
 );
 
-gulp.task('default', ['imagemin', 'uglify-js', 'uglify-css']);
+gulp.task('watch', function(){
+  gulp.watch('scripts/**/*.js', ['uglify-js']),
+  gulp.watch('styles/sass/**/*.scss', ['sass-compile', 'uglify-css']),
+  gulp.watch('images/**.*', ['imagemin'])
+});
+
+gulp.task('default', ['imagemin', 'uglify-js', 'uglify-css', 'watch']);

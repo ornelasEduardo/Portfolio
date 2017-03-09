@@ -2,7 +2,7 @@
 
 //variables
 $font-color: white;
-$font-size: 16;
+$font-size: 1em;
 $h1-size: 72;
 
 //functions
@@ -15,50 +15,64 @@ $h1-size: 72;
   margin-right: auto;
 }
 
-html, body{
-  width: 100%;
-  height: 100%;
-  font-size: rem-calc($font-size);
-}
-
-div,p,span{
-  color: $font-color;
-}
-
-body{
-  background-color: #001427 !important;
-}
-
-.landing-tron-container{
-  padding: 0 !important;
+html,body{
+  background-color: ghostwhite !important;
+  overflow-x: hidden;
+  font-family: 'Sanchez', serif !important;
+  font-size: 62.5%;
 }
 
 .landing-tron{
-  background-color: #F4D58D;
-  height: 200px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/low-poly-texture-90-spotlight.png');
+  background-size: cover;
 
-  .welcome-msg{
-    width: 100%;
-    height: 50%;
-    display: block;
-    @include center-block;
-    color: $font-color !important;
-    font-size: 5vw;
-  }
+  .intro-text{
+    margin-top: 38vh;
+    font-size: 5vmax;
+    font-weight: bold;
+    color: white;
 
-  .arrow-container{
-    width: 100%;
-    height: 50%;
-    display: block;
-    color: #001427;
+    .diff-text{
+      font-family: 'Arvo', serif !important;
+    }
   }
 }
 
-.content-container{
-  padding-top: 15px;
-  .sig-div{
-    width: 33.33%;
-    height: 400px;
-    background-color: #967D69;
+.nav.navbar{
+    margin-top: 2vh;
+    color: white !important;
+    font-size: 2vmax;
+
+    span{
+      font-size: 1.1em;
+    }
+}
+
+.links{
+  margin-right: 2vw;
+  font-size: 1.1vmax;
+  span{
+    cursor: pointer;
   }
+}
+
+.intro-spacer{
+  height: 5vh;
+  background-color: rgba(245,245,255,.5);
+}
+
+.about-me{
+  font-size: 1.4vmax;
+  background-color: rgba(245,245,255,.5);
+  .center-text{
+    font-size: 28px;
+    color: #921837;
+  }
+}
+
+.body-text{
+  font-size: 1.3vmax;
+  color: black;
 }
