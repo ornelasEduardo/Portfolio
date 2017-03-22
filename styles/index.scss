@@ -1,0 +1,159 @@
+*{
+  box-sizing: border-box;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html, body{
+  width: 100%;
+  background: ghostwhite;
+  overflow-x: hidden;
+}
+
+body{
+  margin: 0;
+}
+
+.banner{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 28vh;
+  background-image: url('images/alessandro-viaro-94370.jpg');
+  background-size: cover;
+  background-position: left;
+}
+
+.intro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  width: 634px;
+  font-size: 72px;
+  color: white;
+  border-radius: 5px;
+  border: 10px solid white;
+  align-self: center;
+}
+
+.intro-sub-text{
+  font-size: 18px;
+  color: white;
+  margin-top: 15px;
+}
+
+.section-header{
+  font-weight: bold;
+  color: #682860;
+}
+
+.section_header-wht{
+  font-weight: bold;
+  color: white;
+}
+
+.dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-dot, .its-me{
+  border-radius: 100%;
+  display: inline;
+}
+
+.outer-dot{
+  height: 150px;
+  width: 150px;
+  margin-right: 20px;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .desktop{
+    height: 60px;
+    width: 75px;
+    background-image: url(images/desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .puzzle{
+    height: 60px;
+    width: 75px;
+    background-image: url(images/puzzle-piece.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateZ(270deg);
+  }
+
+  .rocket{
+    height: 75px;
+    width: 75px;
+    background-image: url(images/rocket.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .headphones{
+    height: 70px;
+    width: 105px;
+    background-image: url(images/headphones.svg);
+    background-size: 70px 105px;
+    background-repeat: no-repeat;
+    background-position: center;
+  } 
+}
+
+.its-me{
+  display: inline-block;
+  height: 245px;
+  width: 245px;
+  margin-right: 20px;
+  background-color: grey;
+  background-image: url('images/me.png');
+  background-position: 30% 0%;
+  background-size: cover;
+}
+
+.my-desc{
+  width: 70%;
+  margin-top: 58px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.my-projects{
+  height: 500px;
+  background: #2A2A56;
+  margin-top: 135px;
+}
+
+.col-hv_centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row-hv_centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.horizontal-list span{
+  width: 220px;
+  display: inline-block;
+  text-align: center;
+}
