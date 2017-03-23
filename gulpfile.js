@@ -11,7 +11,7 @@ const htmlmin = require('gulp-htmlmin');
 
 
 gulp.task('imagemin', () =>
-  gulp.src('images/**.*')
+  gulp.src('images/**/**.*')
     .pipe(imagemin({progressive: true}))
     .pipe(gulp.dest('build/images'))
 );
@@ -50,7 +50,7 @@ gulp.task('html-min', () =>
 gulp.task('watch', function(){
   gulp.watch('scripts/**/*.js', ['uglify-js']),
   gulp.watch('styles/*.scss', ['sass-compile', 'uglify-css']),
-  gulp.watch('images/**.*', ['imagemin'])
+  gulp.watch('images/**/**.*', ['imagemin'])
   gulp.watch('index.html', ['html-min'])
 });
 
