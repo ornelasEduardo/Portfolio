@@ -31,3 +31,30 @@ let populateTech = ((i) => {
         if(count == images.length) count = 0;
     });
 })();
+
+$('.tech').on('click', function flipEm(){
+    if($(this).attr('class').indexOf('flip') === -1){
+        const imageUrl = $(this).css('background-image');
+        const imageRegex = /\W+$/;
+        const that = this;
+
+        $(this).addClass('flip text-hv_centered');
+        $(this).prop('name',imageUrl.substring(imageUrl.lastIndexOf('/') + 1, imageUrl.length).replace(imageRegex, ''));
+        $(this).css('background-image', '');
+        setTimeout(function (){$(that).text('test');}, 1000);
+    }
+
+    else{
+        const that = this;
+        const dir = 'images/tech-images/' + $(this).prop('name');
+
+        $(this).addClass('flip-back');
+        $(this).removeClass('flip');
+        $(this).text('');
+
+        setTimeout(function (){
+            $(that).removeClass('flip-back flip');
+            $(that).css('background-image', 'url(' + dir + ')');
+        }, 800)
+    }
+});  
