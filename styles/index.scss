@@ -162,14 +162,16 @@ body{
 }
 
 .tech{
-  height: 150px;
+  height: 250px;
   width: 250px;
   border: .5px solid #95989A;
+  background: white;
   color: black;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  overflow: auto;
 }
 
 .filter{
@@ -195,3 +197,9 @@ body{
   margin-top: 136px;
 }
 
+input[type="text"], textarea{
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}

@@ -50,7 +50,8 @@ input, textarea {
   width: 100px;
   padding: 10px;
   background-color: #f8f8ff;
-  margin-top: 15px; }
+  margin-top: 15px;
+  margin-bottom: 15px; }
 
 .float-left {
   float: left; }
@@ -212,14 +213,16 @@ body {
   display: flex; }
 
 .tech {
-  height: 150px;
+  height: 250px;
   width: 250px;
   border: .5px solid #95989A;
+  background: white;
   color: black;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  cursor: pointer; }
+  cursor: pointer;
+  overflow: auto; }
 
 .filter {
   display: none;
@@ -239,3 +242,9 @@ body {
   height: 500px;
   background: #2A2A56;
   margin-top: 136px; }
+
+input[type="text"], textarea {
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px; }

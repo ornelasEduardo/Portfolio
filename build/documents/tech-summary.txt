@@ -1,0 +1,10 @@
+.net,ASP.NET is an open source web framework for building modern web apps and services with .NET. ASP.NET creates websites based on HTML5, CSS, and JavaScript that are simple, fast, and can scale to millions of users.,1 year
+c#,a programming language that is designed for building a variety of applications that run on the .NET Framework. C# is simple, powerful, type-safe, and object-oriented.,1 year
+c++,is a general-purpose programming language. It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation.,2 years
+css3, is a style sheet language used for describing the presentation of a document written in a markup language. Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any XML document,1 year
+gulp,gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.,1 year
+html5, is a markup language used for structuring and presenting content on the World Wide Web.,1 year
+java,is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible.,4 years
+js,Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production; the majority of websites employ it, and all modern Web browsers support it without the need for plug-ins.,1 year
+sql,is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS).,1 year
+python,is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991.,1 year
