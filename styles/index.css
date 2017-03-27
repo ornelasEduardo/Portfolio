@@ -59,23 +59,56 @@ input, textarea {
 .float-right {
   float: right; }
 
+.card {
+  position: relative;
+  background: #f8f8ff;
+  box-shadow: 0px 20px 25px -10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px; }
+
+.card-header {
+  width: 100%; }
+
+.card-body {
+  width: 100%; }
+
 .flip {
-  animation: 1s ease-in-out flipCard; }
+  animation: 1s ease-in-out flipCard;
+  transform-style: preserve-3d; }
 
 .flip-back {
   animation: 1s ease-in-out flipBack; }
+
+.send-email {
+  animation: send 1.5s ease-in-out; }
 
 @keyframes flipCard {
   from {
     transform: rotateY(0deg); }
   to {
-    transform: rotateY(150deg); } }
+    transform: rotateY(180deg); } }
 
 @keyframes flipBack {
   from {
-    transform: rotateY(-150deg); }
+    transform: rotateY(0deg); }
   to {
-    transform: rotateY(0deg); } }
+    transform: rotateY(180deg); } }
+
+@keyframes send {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1); }
+  10%, 15% {
+    transform: translateY(20px); }
+  25% {
+    opacity: .5; }
+  40%, 100% {
+    opacity: 0;
+    transform: translateY(-100vh) scale(1); } }
 
 * {
   box-sizing: border-box;
@@ -215,6 +248,7 @@ body {
 .tech {
   height: 250px;
   width: 250px;
+  perspective: 1000px;
   border: .5px solid #95989A;
   background: white;
   color: black;
@@ -242,9 +276,55 @@ body {
   height: 500px;
   background: #2A2A56;
   margin-top: 136px; }
+  .footer .section_header-wht {
+    text-align: center;
+    margin-right: 15px; }
+
+.card {
+  width: 450px; }
+  .card .btn {
+    outline: none;
+    background: #2A2A56;
+    color: white;
+    border: 0px;
+    box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    align-self: flex-end; }
+    .card .btn:active {
+      background: #222245;
+      transform: translateY(5px);
+      box-shadow: none; }
+
+.card input {
+  border-radius: 0px;
+  border: 0;
+  border-bottom: 1px solid #95989A;
+  background: #f8f8ff;
+  width: 100%; }
+  .card input:focus {
+    outline: none; }
+
+.card-header {
+  background: #95989A; }
+
+.card-body textarea {
+  background: #f8f8ff;
+  border-radius: 0px;
+  border: 0;
+  outline: none;
+  width: 100%;
+  height: 200px;
+  resize: none;
+  overflow-y: auto; }
+
+.email-confirmation {
+  margin-left: 15px; }
 
 input[type="text"], textarea {
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #f8f8ff inset; }

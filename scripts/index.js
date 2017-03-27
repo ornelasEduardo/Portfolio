@@ -90,11 +90,13 @@ $('.tech').on('click', function flipEm(){
         const imageUrl = $(this).css('background-image');
         const imageRegex = /\W+$/;
         const that = this;
+        
 
         $(this).addClass('flip text-hv_centered');
         $(this).prop('name',imageUrl.substring(imageUrl.lastIndexOf('/') + 1, imageUrl.length).replace(imageRegex, ''));
-        $(this).css('background-image', '');
-        setTimeout(function (){
+        
+        setTimeout(function (){$(that).css('background-image', '');}, 500);
+        setTimeout(function (){  
             for(let i = 0; i < descObj.length; i++){
                 if(descObj[i].name === $(that).prop('name')){
                     $(that).text(descObj[i].summary);
@@ -108,12 +110,26 @@ $('.tech').on('click', function flipEm(){
         const dir = 'images/tech-images/' + $(this).prop('name');
 
         $(this).addClass('flip-back');
-        $(this).removeClass('flip');
-        $(this).text('');
+        $(that).text('');
 
         setTimeout(function (){
             $(that).removeClass('flip-back flip text-hv_centered');
             $(that).css('background-image', 'url(' + dir + ')');
-        }, 800)
+        }, 1000)
     }
+});
+
+$('.send-btn').on('click', function sendEmail(){
+    const that = this;
+
+    setTimeout(function(){$(that).parent('.card').addClass('send-email')}, 100);
+    setTimeout(function (){
+        $('.card').find('input, textarea').each(function (){
+            $(this).val('');
+        });
+    }, 800);
+    setTimeout(function(){
+        $('.card').removeClass('send-email');
+    }, 1800);
+
 });

@@ -8,6 +8,7 @@ const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const rename = require('gulp-rename');
 const htmlmin = require('gulp-htmlmin');
+const surge = require('gulp-surge');
 
 
 gulp.task('imagemin', () =>
@@ -53,5 +54,12 @@ gulp.task('watch', function(){
   gulp.watch('images/**/**.*', ['imagemin'])
   gulp.watch('index.html', ['html-min'])
 });
+
+gulp.task('deploy', () => 
+   surge({
+    project: 'build/',
+    domain: 'eddie.ornelas.surge.sh'
+  })
+);
 
 gulp.task('default', ['imagemin', 'uglify-js', 'uglify-css', 'html-min', 'watch']);

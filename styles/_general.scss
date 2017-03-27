@@ -72,3 +72,23 @@ input, textarea{
 .float-right{
   float: right;
 }
+
+.card{
+  position: relative;
+  background: #f8f8ff;
+  box-shadow: 0px 20px 25px -10px rgba(0,0,0,0.5);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.card-header{
+  width: 100%; 
+}
+
+.card-body{
+  width: 100%;
+}
